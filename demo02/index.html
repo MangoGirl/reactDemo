@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="../build/react.js"></script>
+    <script src="../build/react-dom.js"></script>
+    <script src="../build/browser.min.js"></script>
+    <style type="text/css">
+      li{
+        border:1px solid #ccc;
+        display: block;
+        line-height: 30px;
+        height: 30px;
+        width:100px;
+        text-align: center;
+        margin-top: -1px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example"></div>
+    <script type="text/babel">
+      var names=['张三','李四','王二','麻子'];
+      ReactDOM.render(
+        <ul>
+          {
+            names.map(function(name){
+              return <li>hello,{name}!</li>
+            })
+          }
+        </ul>,
+        document.getElementById('example')
+      );
+    </script>
+  </body>
+</html>
